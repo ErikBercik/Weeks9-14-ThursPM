@@ -19,6 +19,9 @@ public class KitClock : MonoBehaviour
 
     private Coroutine clockIsRunning; //This is telling our cookie cutter to turn on or off
     private IEnumerator doOneHour;
+    //private IEnumerator doOneBoop; me trying to make a bird pop out
+
+    public Object birdObject;
 
     private void Start()
     {
@@ -29,7 +32,7 @@ public class KitClock : MonoBehaviour
         clockIsRunning = StartCoroutine(MoveTheClock());
         //This variable means this particular instance is running
 
-
+        
 
     }
 
@@ -90,7 +93,7 @@ public class KitClock : MonoBehaviour
             //this is basically saying, come back to this bookmark and do another frame, keep coming back UNTIL While isn't true anymore
         }
 
-        //after it does all taht stuff, it moves on to this line
+        //after it does all that stuff, it moves on to this line
         hour++; //add 1 to the value of "hour"
 
         if(hour == 13)
@@ -105,8 +108,8 @@ public class KitClock : MonoBehaviour
     {
         if(clockIsRunning != null) // (this line stops a null error in case the function never ran in the first place)
         {
-            StopCoroutine(clockIsRunning); //Referring back to taht variable we made (Like a GameObject referring to itself)
-                                           //This by itself stops the coroutine from repeating, but won't stop teh hands mid-move...
+            StopCoroutine(clockIsRunning); //Referring back to that variable we made (Like a GameObject referring to itself)
+                                           //This by itself stops the coroutine from repeating, but won't stop the hands mid-move...
         }
 
         if(doOneHour != null)
@@ -116,4 +119,8 @@ public class KitClock : MonoBehaviour
         }
 
     }
+
+   // public void CuckooPopsOut()
+   // {
+   // }
 }

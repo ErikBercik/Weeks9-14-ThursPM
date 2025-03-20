@@ -7,6 +7,7 @@ public class KitChime : MonoBehaviour
 
     public KitClock clock;
 
+
     private void Start()
     {
         clock.OnTheHour.AddListener(Chime);
@@ -22,4 +23,10 @@ public class KitChime : MonoBehaviour
     {
         Debug.Log("Chiming !");
     }
+
+
+
+
+
+
 }
