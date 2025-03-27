@@ -10,6 +10,8 @@ public class Knight : MonoBehaviour
     public float speed = 3;
     public bool canRun = true;
 
+    public AudioSource footsteps;
+
     void Start()
     {
         sr = GetComponent<SpriteRenderer>();
@@ -36,6 +38,12 @@ public class Knight : MonoBehaviour
             transform.position += transform.right * direction * speed * Time.deltaTime;
         }
 
+    }
+
+    public void FootstepMaker()
+    {
+        Debug.Log("Whack!");
+        footsteps.Play();
     }
 
     public void AttackHasFinished()
