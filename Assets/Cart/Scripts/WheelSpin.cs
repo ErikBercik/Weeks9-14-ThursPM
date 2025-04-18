@@ -27,4 +27,9 @@ public class WheelSpin : MonoBehaviour
         rot.z += -1;
         transform.eulerAngles = rot;
     }
+
+    public void StopRotate() //my manual way of stopping the rotation with a button
+    {
+        startRotate = false;
+    }
 }
